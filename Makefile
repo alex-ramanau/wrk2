@@ -61,6 +61,9 @@ $(LDIR)/libluajit.a:
 	@echo Building LuaJIT...
 	@$(MAKE) -C $(LDIR) BUILDMODE=static
 
+install: $(BIN)
+	cp $(BIN) $(DESTDIR)
+
 .PHONY: all clean
 .SUFFIXES:
 .SUFFIXES: .c .o .lua

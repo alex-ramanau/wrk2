@@ -1,0 +1,25 @@
+name: wrk2
+base: core24
+version: '1.0' # Replace with the actual version of wrk2
+summary: Modern HTTP benchmarking tool
+description: |
+  wrk2 is a constant throughput, correct latency recording variant of wrk.
+  It is a modern HTTP benchmarking tool capable of generating significant load
+  when run on a single multi-core CPU.
+
+grade: stable
+confinement: strict
+
+parts:
+  wrk2:
+    plugin: make
+    source: https://github.com/alex-ramanau/wrk2
+    source-type: git
+    build-packages:
+      - build-essential
+      - libssl-dev
+
+apps:
+  wrk2:
+    command: bin/wrk
+    plugs: [network, network-bind]
