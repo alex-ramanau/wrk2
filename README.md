@@ -59,6 +59,10 @@
   processing, and custom reporting. Several example scripts are located in
   scripts/
 
+## Installation from snap
+
+     sudo snap install wrk2
+
 ## Basic Usage
 
     wrk -t2 -c100 -d30s -R2000 http://127.0.0.1:8080/index.html
