@@ -1,6 +1,6 @@
 name: wrk2
 base: core24
-version: '1.0.0' # tag is cut only in work repo for snap versioning purposes
+version: '1.0.1' # tag is cut only in work repo for snap versioning purposes
 summary: Modern HTTP benchmarking tool
 description: |
   wrk2 is a constant throughput, correct latency recording variant of wrk.
@@ -22,4 +22,4 @@ parts:
 apps:
   wrk2:
     command: wrk
-    plugs: [network, network-bind]
+    plugs: [network, network-bind, home]
